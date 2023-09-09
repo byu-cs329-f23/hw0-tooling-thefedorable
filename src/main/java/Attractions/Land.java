@@ -1,18 +1,35 @@
 package Attractions;
 
+/**
+ * Object that represents the lands within a theme park
+ * @author Tanner Hartwell
+ */
 public class Land {
   private final String name;
   private final Ride[] rides;
 
+  /**
+   * Constructor for class
+   * @param name set name of land
+   * @param rides set list of rides in land
+   */
   public Land(String name, Ride[] rides) {
     this.name=name;
     this.rides=rides;
   }
 
+  /**
+   * Get the name of the land in the object
+   * @return String of name
+   */
   public String getName() {
     return name;
   }
 
+  /**
+   * Calculate the average wait time of a land
+   * @return int representing average wait time
+   */
   public int avWaitTime() {
     int add = 0;
     int rideNum = 0;

@@ -6,7 +6,22 @@ import org.json.JSONObject;
 import com.google.gson.Gson;
 import Attractions.*;
 
+/**
+ * Main class of program
+ * @author Tanner Hartwell
+ */
 public class Main {
+
+  /**
+   * constructor for main class
+   */
+  public Main(){}
+
+  /**
+   * main function of program
+   * @param args arguments given at running of program
+   * @throws IOException throw error if URL isn't good
+   */
   public static void main(String[] args) throws IOException {
 
     JSONObject json=null;
