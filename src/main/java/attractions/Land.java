@@ -1,7 +1,8 @@
-package Attractions;
+package attractions;
 
 /**
- * Object that represents the lands within a theme park
+ * Object that represents the lands within a theme park.
+ *
  * @author Tanner Hartwell
  */
 public class Land {
@@ -9,17 +10,19 @@ public class Land {
   private final Ride[] rides;
 
   /**
-   * Constructor for class
+   * Constructor for class.
+   *
    * @param name set name of land
    * @param rides set list of rides in land
    */
   public Land(String name, Ride[] rides) {
-    this.name=name;
-    this.rides=rides;
+    this.name = name;
+    this.rides = rides;
   }
 
   /**
-   * Get the name of the land in the object
+   * Get the name of the land in the object.
+   *
    * @return String of name
    */
   public String getName() {
@@ -27,7 +30,8 @@ public class Land {
   }
 
   /**
-   * Calculate the average wait time of a land
+   * Calculate the average wait time of a land.
+   *
    * @return int representing average wait time
    */
   public int avWaitTime() {
@@ -36,8 +40,8 @@ public class Land {
 
     for (Ride ride : rides) {
       if (ride.getWait_time() != 0) {
-        add+=ride.getWait_time();
-        rideNum +=1;
+        add += ride.getWait_time();
+        rideNum += 1;
       }
     }
 
@@ -46,9 +50,7 @@ public class Land {
     if (rideNum != 0) {
       average = add / rideNum;
       return average;
-    }
-
-    else {
+    } else {
       return 0;
     }
   }
@@ -57,9 +59,7 @@ public class Land {
   public String toString() {
     StringBuilder out = new StringBuilder();
     StringBuilder combined = new StringBuilder();
-    String begin="Name: " + name +
-            "\n" +
-            "Rides:" + "\n" + "\n";
+    String begin = "Name: " + name + "\n" + "Rides:" + "\n" + "\n";
 
     for (Ride ride : rides) {
 

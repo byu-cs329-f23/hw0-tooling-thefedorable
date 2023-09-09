@@ -1,22 +1,25 @@
-package Attractions;
+package attractions;
 
 /**
- * Object that holds wait time information regrading different theme parks
+ * Object that holds wait time information regrading different theme parks.
+ *
  * @author Tanner Hartwell
  */
 public class Park {
   private final Land[] lands;
 
   /**
-   * contractor for park object
+   * contractor for park object.
+   *
    * @param lands list of land within park
    */
   public Park(Land[] lands) {
-    this.lands=lands;
+    this.lands = lands;
   }
 
   /**
-   * get a copy of the list of lands with park
+   * get a copy of the list of lands with park.
+   *
    * @return array of land objects
    */
   public Land[] getLands() {
@@ -24,17 +27,18 @@ public class Park {
   }
 
   /**
-   * calculates average wait for entire park object
+   * calculates average wait for entire park object.
+   *
    * @return int representing wait time in min
    */
   public int getAverageWait() {
-    int averageWait=0;
+    int averageWait = 0;
 
     for (Land land : lands) {
-      averageWait+=land.avWaitTime();
+      averageWait += land.avWaitTime();
     }
 
-    averageWait= averageWait / lands.length;
+    averageWait = averageWait / lands.length;
     return averageWait;
   }
 

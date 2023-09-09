@@ -1,33 +1,36 @@
-package Attractions;
+package attractions;
 
 /**
- * Object that represents a single ride within the theme park
+ * Object that represents a single ride within the theme park.
+ *
  * @author Tanner Hartwell
  */
 public class Ride {
   private final String name;
-  private final boolean is_open;
-  private final int wait_time;
+  private final boolean isOpen;
+  private final int waitTime;
 
   /**
-   * Constuctor for ride object
+   * Constructor for ride object.
+   *
    * @param name of ride
-   * @param is_open represents if the ride open
-   * @param wait_time of the ride
+   * @param isOpen represents if the ride open
+   * @param waitTime of the ride
    */
 
-  public Ride(String name, boolean is_open, int wait_time) {
-    this.name=name;
-    this.is_open=is_open;
-    this.wait_time=wait_time;
+  public Ride(String name, boolean isOpen, int waitTime) {
+    this.name = name;
+    this.isOpen = isOpen;
+    this.waitTime = waitTime;
   }
 
   /**
-   * Get the wait time of the ride
+   * Get the wait time of the ride.
+   *
    * @return int representing the wait time in min
    */
   public int getWait_time() {
-    return wait_time;
+    return waitTime;
   }
 
   @Override
@@ -36,13 +39,11 @@ public class Ride {
     string.append("Name: ").append(name);
     string.append('\n');
 
-    if (is_open) {
+    if (isOpen) {
       string.append("Status: ").append("Open");
       string.append("\n");
-      string.append("Wait: ").append(wait_time);
-    }
-
-    else  {
+      string.append("Wait: ").append(waitTime);
+    } else  {
       string.append("Status: ").append("Closed");
     }
 
