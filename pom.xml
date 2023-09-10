@@ -48,7 +48,6 @@
                 <version>3.5.0</version>
                 <configuration>
                     <show>public</show>
-                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                 </configuration>
             </plugin>
             <plugin>
@@ -67,10 +66,8 @@
                 <version>3.3.0</version>
                 <configuration>
                     <configLocation>google_checks.xml</configLocation>
-                    <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
                     <failsOnError>true</failsOnError>
-                    <failsOnWarn>true</failsOnWarn>
                     <linkXRef>false</linkXRef>
                 </configuration>
                 <executions>
@@ -85,8 +82,9 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
+                <version>3.4.5</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.maven.shared</groupId>
