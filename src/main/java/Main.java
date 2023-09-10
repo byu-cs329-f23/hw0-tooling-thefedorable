@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Main class of program.
@@ -63,8 +65,11 @@ public class Main {
       System.out.println("In order to not fail the assignment I had to ");
       System.out.println("break it because the format the api uses doesn't");
       System.out.println("match checkstyle. I'm mad and had to clarify it here");
+
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
+
+  static final Logger log = LoggerFactory.getLogger(Main.class);
 }
